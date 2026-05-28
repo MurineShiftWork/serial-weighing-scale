@@ -1,8 +1,13 @@
 # Serial Weighing Scale
+
+> **Deprecated.** This package is no longer maintained.
+> Use [serial-scale-hx711](https://github.com/MurineShiftWork/serial-scale-hx711) (Arduino+HX711) or
+> [serial-scale-bench](https://github.com/MurineShiftWork/serial-scale-bench) (RS-232/USB bench scales) instead.
+
 Arduino-based cheap precision weighing scale for readout via serial communication.
 
 ***
-Version: "2.0.4"
+Version: "3.0.0" (deprecation stub — no further updates)
 
 Precision weighing scales that include serial port communication usually come at considerable cost. This project showcases an affordable alternative.
 Using readily available electronics parts, the scale's measurements can be read via serial communication by a simple Python class.

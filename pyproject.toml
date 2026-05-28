@@ -3,53 +3,19 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "serial_weighing_scale"
-version = "2.0.4"
+name = "serial-weighing-scale"
+version = "3.0.0"
 authors = [
     { name = "Lars B. Rollik", email = "L.B.Rollik@protonmail.com" }
 ]
 license = { file = "LICENSE" }
-description = "serial_weighing_scale: Python API for serial weighing scales based on Arduino+HX711"
+description = "Deprecated. Use serial-scale-hx711 (Arduino+HX711) or serial-scale-bench (RS-232/USB bench scales) instead."
 readme = { file = "README.md", content-type = "text/markdown" }
-classifiers = [
-    "Intended Audience :: Developers",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "License :: OSI Approved :: BSD License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-]
-requires-python = ">=3.6"
-dependencies = [
-    "pyserial",
-    # struct, json are built-in
-]
+requires-python = ">=3.8"
+dependencies = []
 
 [project.urls]
-Repository = "https://github.com/larsrollik/serial-weighing-scale"
-"Issue Tracker" = "https://github.com/larsrollik/serial-weighing-scale/issues"
-
-
-[project.optional-dependencies]
-dev = [
-    "black",
-    "bump2version",
-    "pytest-cov",  # implies: pytest, coverage dependencies
-    "pre-commit",
-    "toml",
-    "types-PyYAML",
-    "types-pyserial",
-]
-
-[project.entry-points.console_scripts]
-#serial-weighing-scale-entrypoint = "serial-weighing-scale.__init__:run"
+Repository = "https://github.com/MurineShiftWork/serial-scale-hx711"
 
 [tool.setuptools]
 zip-safe = false
