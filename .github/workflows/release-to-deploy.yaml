@@ -6,6 +6,7 @@ name: release_to_deploy
 #      - prod
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: [pr_to_prod]
     types:
