@@ -10,6 +10,6 @@ on:
 
 jobs:
   deprecated:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - run: echo "Package deprecated — no lint or tests."

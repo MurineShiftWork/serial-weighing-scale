@@ -14,7 +14,7 @@ on:
 
 jobs:
   check-version-and-tag:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     outputs:
       version: ${{ steps.get-version.outputs.version }}
     steps:
@@ -50,7 +50,7 @@ jobs:
 
   print-version:
     needs: [check-version-and-tag]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     env:
       VERSION: ${{ needs.check-version-and-tag.outputs.version }}
     steps:
@@ -61,7 +61,7 @@ jobs:
 
   release:
     needs: [check-version-and-tag]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     env:
       VERSION: ${{ needs.check-version-and-tag.outputs.version }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -80,7 +80,7 @@ jobs:
   deploy:
     needs: release
     if: success()  # Proceed if release creation is successful
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v6
       - name: Set up Python

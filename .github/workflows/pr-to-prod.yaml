@@ -9,7 +9,7 @@ on:
 
 jobs:
   squash_merge_to_prod:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     if: github.event.pull_request.merged == true
 
     permissions:
